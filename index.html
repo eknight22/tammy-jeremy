@@ -1,0 +1,183 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Tammy & Jeremy</title>
+<style>
+    /* General Styling */
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+        font-family: 'Georgia', serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 800px;
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-family: 'Helvetica Neue', sans-serif;
+        font-weight: 300;
+        letter-spacing: 2px;
+        color: #d4af37;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+    }
+
+    /* Hero Image */
+    .hero-img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        margin-bottom: 40px;
+        border: 1px solid #333;
+    }
+
+    /* The Poem Box */
+    .poem {
+        font-size: 1.4rem; /* Slightly larger for readability */
+        line-height: 1.8;
+        margin-bottom: 60px;
+        padding: 40px 20px;
+        background: rgba(255,255,255,0.03);
+        border-radius: 15px;
+        box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+        position: relative;
+    }
+
+    .poem p {
+        margin-bottom: 25px;
+    }
+
+    /* The Last Line ("I love you both") */
+    .closing-line {
+        margin-bottom: 10px !important; /* Tighten gap to signature */
+    }
+
+    /* The Signature Logic */
+    .signature-container {
+        height: 1.8em; /* Reserve vertical space */
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; /* Align to top of container */
+        margin-top: 0;
+    }
+
+    .signature-text {
+        position: absolute;
+        font-style: italic;
+        color: #d4af37; /* Gold signature */
+        opacity: 0;
+        animation: cycleName 8s infinite;
+    }
+
+    /* Animation Logic: 
+       Total loop 8s. 
+       Eric shows for first half, Papa for second half. 
+       No overlap. 
+    */
+    .signature-text:nth-child(1) {
+        animation-delay: 0s; /* Start immediately */
+    }
+
+    .signature-text:nth-child(2) {
+        animation-delay: 4s; /* Start halfway through */
+    }
+
+    @keyframes cycleName {
+        0% { opacity: 0; }
+        10% { opacity: 1; }  /* Fade in */
+        40% { opacity: 1; }  /* Stay visible */
+        50% { opacity: 0; }  /* Fade out completely */
+        100% { opacity: 0; } /* Stay hidden */
+    }
+
+    /* Photo Grid */
+    .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        margin-bottom: 50px;
+        opacity: 0.9;
+    }
+
+    .photo-grid img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 4px;
+        transition: transform 0.3s ease;
+    }
+
+    .photo-grid img:hover {
+        transform: scale(1.05);
+        opacity: 1;
+        z-index: 10;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+
+    @media (max-width: 600px) {
+        .poem { font-size: 1.1rem; }
+        .hero-img { width: 100%; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>This Thanksgiving...</h1>
+
+    <img src="Verve-Shugg-Papa2_7.JPG" alt="The Crew" class="hero-img">
+
+    <div class="poem">
+        <p>I’m thankful for stuffing and cranberry jam,<br>
+        But mostly for Jeremy and my girl Tam.</p>
+
+        <p>It’s a funny arrangement, this friendship we share:<br>
+        I handle the hardware; you handle the care.</p>
+
+        <p>I help with your glitches and cracked LCDs,<br>
+        You move me to fight this fucking disease.</p>
+
+        <p>I’m bad at the phone (yeah, I know it’s a crime),<br>
+        Yet you’ve stuck with me for a very long time.</p>
+
+        <p>Through all the chaos, one thing is true:<br>
+        I’m deeply thankful I wound up with you.</p>
+
+        <p>If lives can be said to have VIPs,<br>
+        Tammy and Jerms, you are that for me.</p>
+
+        <p class="closing-line">I love you both…</p>
+        
+        <div class="signature-container">
+            <span class="signature-text">Eric</span>
+            <span class="signature-text">Papa</span>
+        </div>
+    </div>
+
+		<div class="photo-grid">
+			<img src="IMG_0455.JPG" alt="Photo">
+			<img src="ww1_9.JPG" alt="Photo">
+			<img src="Papa-Shugg20.JPG" alt="Photo">
+			<img src="Papa-Shugg.JPG" alt="Photo">
+			<img src="DJ Verve-Papa.JPG" alt="Photo">
+			<img src="softPantsCrew_1.jpeg" alt="Photo">
+			<img src="P0000044.JPG" alt="Photo">
+			<img src="Shugg-Verve3_5.JPG" alt="Photo">
+		</div>
+
+</div>
+
+</body>
+</html>
