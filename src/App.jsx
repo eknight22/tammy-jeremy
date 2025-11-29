@@ -1,7 +1,7 @@
 import Hero from './components/Hero';
 import StorySection from './components/StorySection';
 import Signature from './components/Signature';
-import Gallery from './components/Gallery';
+
 import DynamicBackground from './components/DynamicBackground';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         <Hero />
         <StorySection />
         <Signature />
-        <Gallery />
+
       </div>
     </main>
   );
